@@ -74,3 +74,98 @@ for user in users:
   success = update_user(user)
   print(f"User {user['name']} updated? {success}!")
 ```
+
+## Resultados
+```ruby
+[
+  {
+    "id": 5233,
+    "name": "guimlz",
+    "account": {
+      "id": 5562,
+      "number": "49146761845",
+      "agency": "1234",
+      "balance": 0.0,
+      "limit": 1000.0
+    },
+    "card": {
+      "id": 5090,
+      "number": "49146761845",
+      "limit": 1000.0
+    },
+    "features": [
+      {
+        "id": 1605,
+        "icon": "string",
+        "description": "string"
+      }
+    ],
+    "news": [
+      {
+        "id": 9642,
+        "icon": "string",
+        "description": ""Cada cliente é especial. Seu sucesso financeiro é nossa missão. Conte com soluções personalizadas para você. #InovaçãoBancária""
+      }
+    ]'
+
+{
+  "id": 5234,
+  "name": "nini",
+  "account": {
+    "id": 5563,
+    "number": "539835274",
+    "agency": "1234",
+    "balance": 0,
+    "limit": 1000
+  },
+  "card": {
+    "id": 5091,
+    "number": "539835274",
+    "limit": 1000
+  },
+  "features": [
+    {
+      "id": 1606,
+      "icon": "string",
+      "description": "string"
+    }
+  ],
+  "news": [
+    {
+      "id": 9643,
+      "icon": "string",
+      "description": "Descubra um mundo de possibilidades bancárias personalizadas para você. Sua jornada financeira, nossa prioridade. #InovaçãoBancária"
+    }
+  ]
+}
+{
+  "id": 5235,
+  "name": "pmiguel",
+  "account": {
+    "id": 5564,
+    "number": "21527955800",
+    "agency": "1234",
+    "balance": 0,
+    "limit": 1000
+  },
+  "card": {
+    "id": 5092,
+    "number": "21527955800",
+    "limit": 1000
+  },
+  "features": [
+    {
+      "id": 1607,
+      "icon": "string",
+      "description": "string"
+    }
+  ],
+  "news": [
+    {
+      "id": 9644,
+      "icon": "string",
+      "description": "Sua prosperidade é nossa prioridade. Descubra ofertas personalizadas feitas sob medida para você. #InovaçãoFinanceira"
+    }
+  ]
+}
+```
