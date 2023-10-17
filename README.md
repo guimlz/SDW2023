@@ -2,9 +2,12 @@
 
 Contexto: Você é um cientista de dados no Santander e recebeu a tarefa de envolver seus clientes de maneira mais personalizada. Seu objetivo é usar o poder da IA Generativa para criar mensagens de marketing personalizadas que serão entregues a cada cliente.
 
+```ruby
 sdw2023_api_url = 'https://sdw-2023-prd.up.railway.app'
+```
 
 ## Extract
+```ruby
 
 import pandas as pd
 
@@ -21,8 +24,10 @@ def get_user(id):
 
 users = [user for id in user_ids if (user := get_user(id)) is not None]
 print(json.dumps(users, indent=2))
+```
 
-##Transform
+## Transform
+```ruby
 
 !pip install openai
 
@@ -55,9 +60,11 @@ for user in users:
       "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/credit.svg",
       "description": news
   })
+```
 
 ## Load
 
+```ruby
 [ ]
 def update_user(user):
   response = requests.put(f"{sdw2023_api_url}/users/{user['id']}", json=user)
@@ -66,3 +73,4 @@ def update_user(user):
 for user in users:
   success = update_user(user)
   print(f"User {user['name']} updated? {success}!")
+```
