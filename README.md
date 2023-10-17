@@ -4,6 +4,8 @@ Contexto: Você é um cientista de dados no Santander e recebeu a tarefa de envo
 
 sdw2023_api_url = 'https://sdw-2023-prd.up.railway.app'
 
+## Extract
+
 import pandas as pd
 
 df = pd.read_csv('SDW2023.csv.txt')
@@ -19,6 +21,8 @@ def get_user(id):
 
 users = [user for id in user_ids if (user := get_user(id)) is not None]
 print(json.dumps(users, indent=2))
+
+##Transform
 
 !pip install openai
 
@@ -51,10 +55,8 @@ for user in users:
       "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/credit.svg",
       "description": news
   })
-output
 
 ## Load
-Atualize a lista de "news" de cada usuário na API com a nova mensagem gerada.
 
 [ ]
 def update_user(user):
@@ -64,11 +66,3 @@ def update_user(user):
 for user in users:
   success = update_user(user)
   print(f"User {user['name']} updated? {success}!")
-output
-User guimlz updated? True!
-User nini updated? True!
-User pmiguel updated? True!
-
-
-
-
